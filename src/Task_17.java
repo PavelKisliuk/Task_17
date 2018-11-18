@@ -109,7 +109,7 @@ public class Task_17 {
 			return possibleNumbers;
 		}
 		else {
-			return this.numbersOfDigits - 1;
+			return (this.numbersOfDigits - 1);
 		}
 	}
 
