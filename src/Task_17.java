@@ -1,4 +1,6 @@
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
@@ -6,7 +8,7 @@ public class Task_17 {
 	public static void main(String[] args) {
 		final String outputPath = "OUTPUT.TXT";
 		final Sectors test = new Sectors();
-		try(final BufferedWriter output = new BufferedWriter(new FileWriter(outputPath))) {
+		try(final BufferedWriter output = Files.newBufferedWriter(Paths.get(outputPath))) {
 			output.write(test.toString());
 		}catch (IOException e) {
 			e.printStackTrace();
@@ -25,7 +27,7 @@ public class Task_17 {
 	{
 		int mirrorNumbersOfDigits = 0;
 		String mirrorDigits = "";
-		try(final BufferedReader input = new BufferedReader (new FileReader(path))) {
+		try(final BufferedReader input = Files.newBufferedReader(Paths.get(path))) {
 			//-----------------------------------------------------------------------------
 			if(input.ready()) {
 				//-----------------------------------------------------------------------------
