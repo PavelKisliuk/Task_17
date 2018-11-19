@@ -109,12 +109,7 @@ public class Task_17 {
 		}
 		//-----------------------------------------------------------------------------
 		int possibleNumbers = this.numbersOfDigits - prefixElement;
-		if(((this.numbersOfDigits - 1) % possibleNumbers) == 0) {
-			return possibleNumbers;
-		}
-		else {
-			return (this.numbersOfDigits - 1);
-		}
+		return (((this.numbersOfDigits - 1) % possibleNumbers) == 0) ? possibleNumbers : (this.numbersOfDigits - 1);
 	}
 
 	@Override
